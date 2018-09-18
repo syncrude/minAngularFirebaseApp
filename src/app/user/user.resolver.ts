@@ -23,7 +23,7 @@ export class UserResolver implements Resolve<FirebaseUserModel> {
         } else {
           user.image = res.photoURL;
           user.name = res.displayName;
-          user.provider = res.providerData[0].providerId;
+          // user.provider = res.providerData[0].providerId;
           return resolve(user);
         }
       }, err => {
